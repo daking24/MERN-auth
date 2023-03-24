@@ -1,4 +1,4 @@
-import {AUTH} from '../const/actionsTypes';
+import {AUTH} from '../const/actionTypes';
 import * as api from "../../api/index.js";
 
 export const loadUser = () => async (dispath)=>{
