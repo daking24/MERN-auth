@@ -1,8 +1,6 @@
 import axios from 'axios';
-import dotenv from 'dotenv';
-dotenv.config();
 
-const API = axios.create({baseURL: process.env.API_URL});
+const API = axios.create({ baseURL: "http://localhost:5000"});
 
 API.interceptors.request.use((req)=> {
   if(localStorage.getItem("user_token")){
