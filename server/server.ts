@@ -11,6 +11,8 @@ const app: Express = express();
 app.use(cors());
 app.use(express.json());
 
+app.use('/users', userRoutes)
+
 const PORT = process.env.PORT || 5000;
 const MONGOOSE_URL = process.env.MONGOOSE_URL || 'mongodb://localhost:27017/LSYSTEM'
 
