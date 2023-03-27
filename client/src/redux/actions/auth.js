@@ -34,7 +34,7 @@ export const signinGoogle = (accessToken, navigate) => async (dispatch) => {
 
 export const signup = (formData, navigate) => async (dispath) => {
   try {
-    const { data } = await api.signIn(formData)
+    const { data } = await api.signUp(formData)
 
     dispath({ type: AUTH, data })
     navigate('/')
@@ -45,7 +45,7 @@ export const signup = (formData, navigate) => async (dispath) => {
 
 export const signupGoogle = (accessToken, navigate) => async (dispath) => {
   try {
-    const { data } = await api.signIn(accessToken)
+    const { data } = await api.signUp(accessToken)
 
     dispath({ type: AUTH, data })
     navigate('/')

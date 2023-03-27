@@ -32,7 +32,7 @@ const Signup = () => {
 
   function handleOnSubmit(e) {
     e.preventDefault();
-    if (sForm.name !== "" && sForm.password !== "" && sForm.confirmPassword !== "" && sForm.email !== "" && sForm.password === sForm.confirmPassword && sForm.password.length >= 4) {
+    if (sForm.name !== "" && sForm.password !== "" && sForm.confirmPassword !== "" && sForm.email !== "" && sForm.password === sForm.confirmPassword && sForm.password.length >= 8) {
       dispatch(signup(sForm, navigate))
     }
   }
@@ -45,24 +45,24 @@ const Signup = () => {
         <h2>Create your account</h2>
         <div className='inputsContainer'>
           <label>NAME</label>
-          <input onChange={handleChange} placeholder='Enter name' type='text' />
+          <input onChange={handleChange} name="name" placeholder='Enter name' type='text' />
         </div>
         <div className='inputsContainer'>
           <label>EMAIL</label>
-          <input onChange={handleChange} placeholder='Enter email' type='email' />
+          <input onChange={handleChange} name="email" placeholder='Enter email' type='email' />
         </div>
         <div className='inputsContainer'>
           <label>PASSWORD</label>
-          <input onChange={handleChange} placeholder='Enter password' type='password' />
+          <input onChange={handleChange} name="password" placeholder='Enter password' type='password' />
         </div>
         <div className='inputsContainer'>
           <label>CONFIRM PASSWORD</label>
-          <input onChange={handleChange} placeholder='Enter password again' type='password' />
+          <input onChange={handleChange} name="confirmPassword" placeholder='Enter password again' type='password' />
         </div>
         <button onClick={handleOnSubmit} className='signup-btn'>Register</button>
         <span className='su-or'>OR</span>
         <button onClick={() => login()} className='sign-google-btn'>
-          <i class="fa fa-google" aria-hidden="true"></i>
+          <i className="fa fa-google" aria-hidden="true"></i>
           Sign Up with Google</button>
         <span className='notreg'>Already have account? <Link className='sign-link' to='/account/login'>Log In</Link></span>
       </div>

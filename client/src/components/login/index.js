@@ -46,7 +46,7 @@ const Login = () => {
         <button onClick={handleSubmit} className='login-btn'>Log In</button>
       <span className='lg-or'>OR</span>
         <button onClick={() => login()} className='google-btn'>
-          <i class="fa fa-google" aria-hidden="true"></i>
+          <i className="fa fa-google" aria-hidden="true"></i>
            Sign In with Google</button>
         <span className='notreg'>Not registered? <Link className='sign-link' to='/account/signup'>SignUp</Link></span>
     </div>
