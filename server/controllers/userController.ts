@@ -93,7 +93,7 @@ const signupController = async (req: Request, res: Response) => {
     const {name, email, confirmPassword, password} = req.body;
     try {
       if(!email || !name || !confirmPassword || !password || password.length <= 8){
-        res.status(400).json({message: "Invalid field!"})
+        res.status(400).json({message: `Invalid info! email -${email}\t password -${password}\t confirm password -${confirmPassword}\t name -${name}`})
       }
       const alreadyExistUser = await User.findOne({ email })
 
